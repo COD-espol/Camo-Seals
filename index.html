@@ -341,7 +341,15 @@
         <div class="content has-text-justified">
           <!-- TODO: Replace with your paper abstract -->
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            This paper introduces Camo-Seals, a new benchmark dataset for cross-spectral camouflaged seal detection built from co-registered
+            visible–thermal aerial image pairs acquired during Arctic wildlife surveys. To ensure a standardized and comprehensive evaluation,
+five widely recognized camouflaged object detection (COD) metrics are adopted, encompassing structural similarity, boundary
+accuracy, and global alignment. Fifteen state-of-the-art COD architectures are benchmarked across RGB, thermal, and fused
+cross-spectral inputs, covering a broad range of CNN-based, transformer-based, and multimodal designs. Results demonstrate that
+cross-spectral fusion consistently outperforms unimodal inference, with SWNet and AVNet achieving the best overall performance
+when combining RGB and thermal modalities, surpassing all single-modality baselines by up to 13% in weighted F-measure.
+The Camo-Seals dataset is publicly released to foster research at the intersection of computer vision, cross-spectral fusion, and
+ecological monitoring of camouflaged Arctic wildlife. The dataset will be available on GitHub.
           </p>
         </div>
       </div>
@@ -358,31 +366,35 @@
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
+        <img src="static/images/seals_portrait.jpg" alt="First research result visualization" loading="lazy"/>
         <!-- TODO: Replace with description of this result -->
         <h2 class="subtitle has-text-centered">
-          First image description.
+          Examples of images alongside their respective edges extracted by RGB using Sobel, edges of the GT mask, and camouflage scores
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
+        <img src="static/images/ImgsIR.jpg" alt="Second research result visualization" loading="lazy"/>
         <h2 class="subtitle has-text-centered">
-          Second image description.
+         Representative image samples from the Camo-Seals dataset. Each column corresponds to a registered cross-spectral pair: RGB images
+(1st and 4th row), co-registered thermal infrared images (2nd and 5th row), and their corresponding binary ground-truth segmentation masks (3rd
+and 6th row).
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
+        <img src="static/images/metrics.jpg" alt="Third research result visualization" loading="lazy"/>
         <h2 class="subtitle has-text-centered">
-         Third image description.
+        Metric evaluation results for each COD technique on the Seals dataset, reported for the RGB and Thermal baseline
        </h2>
      </div>
      <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
+       <img src="static/images/centroid.jpg" alt="Third research result visualization" loading="lazy"/>
+        <h2 class="subtitle has-text-centered">
+        Spatial distribution of mask centroids across the Camo-Seals dataset. Each point represents the normalized (X, Y) centroid position of a
+seal mask within its corresponding image. The uniform spread across the full image plane indicates that seals appear throughout the entire frame
+without positional bias, posing a spatially unconstrained detection challenge.
+       </h2>
       </h2>
     </div>
   </div>
@@ -415,37 +427,8 @@
 <!-- End youtube video -->
 
 
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- Video carousel -->    
+
 <!-- End video carousel -->
 
 
